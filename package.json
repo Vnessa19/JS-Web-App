@@ -1,6 +1,6 @@
 {
   "name": "mern_app",
-  "version": "2023",
+  "version": "^1",
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
