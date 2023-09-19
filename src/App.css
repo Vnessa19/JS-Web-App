@@ -1,0 +1,605 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/* Add fonts from the app's server */
+/*@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} */
+/*...or hosted services like Google Fonts */
+@import url(//fonts.googleapis.com/css?family=Font+Name);
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*@import 'node_modules/modern-normalize/modern-normalize.css';*/
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+    /* npm install modern-normalize
+      Resets elements for browser consistency.  
+      https://www.npmjs.com/package/modern-normalize
+    */         
+
+/* Component-specific stylesheets, if any. 
+@import "component1.css";   
+*/
+
+/*   ----- Variables  -----  */
+:root {
+--primary-dark-blue:#4971A6;
+--primary-light-blue: #77A1D9;
+--primary-backgroud:#F2F0D0;
+--primary-text:#02040A;
+--primary-contract: #8f2d56;
+--transparent-pink:hsla(29, 56%, 82%, 0.55);
+--transparent-yellow:hsla(56, 57%, 88%, 0.88);
+--transparent-blue:hsla(208, 74%, 80%, 0.91);
+--transparent-contract: hsla(335, 52%, 37%, 0.55);
+--custom-embellishment-name:;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+background-color: var(--transparent-yellow);
+background-image:url(images/Silent-Concert-SantaBarbara-CA.jpg);
+background-size: 100%;
+background-attachment:fixed;
+background-size: cover;
+font-family:'Open Sans';
+margin: 1% 5%;
+padding: 10px;
+max-width:none;
+color:var(--primary-text);
+}
+
+/*  ----- Page layout blocks -----  */
+/*h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif};*/
+header,footer{
+background-color:var(--transparent-blue);
+border-radius: 15px;
+padding: 1px;
+margin: 2%;
+}
+
+main {
+background-color: var(--transparent-yellow);
+color:var(--primary-text);
+padding: 0% 2%;
+margin: 0% 2% 2% 2%;
+border-radius: 25px;
+}
+section {
+margin: 2%;
+padding: 2% 0%;
+}
+article {
+    }
+  #topic1 {}
+  #topic2 {}
+div {
+padding-left: 35px;
+}
+aside {}
+footer {}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+text-align: center;
+}
+nav a {
+text-decoration:none;
+background-color:var(--transparent-contract);
+border:2px solid var(--transparent-yellow);
+color:var(--primary-backgroud);
+border-radius:15px;
+padding:20px;
+font-family: 'Open Sans', sans-serif;
+font-size: medium;
+font-weight: bold;
+}
+nav a:hover {
+background-color:var(--transparent-yellow);
+border:2px solid var(--primary-dark-blue);
+color:var(--primary-dark-blue);
+}
+
+
+/*  -----  Typography  ----- */
+p {}
+.diffFont {
+font-family: 'Roboto', sans-serif;
+}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', sans-serif;} 
+h1 {
+text-align: center;
+color:var(--primary-contract);
+}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+q {}
+cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+background-color: var(--transparent-pink);
+width: 600px;
+height: 200px;
+border-collapse:collapse;
+}
+.staffTable {
+margin-top: 15px;
+width: 100%;
+}
+.staffTable thead{
+  background-color:var(--transparent-contract);
+}
+.staffTable tr:nth-child(even) {
+  background-color: var(--transparent-blue);
+}
+
+caption {
+margin: 2%;
+font-size: larger;
+font-weight: bold;
+}
+thead {
+background-color: var(--transparent-blue);
+}
+tbody {
+
+}
+tfoot {}
+tr {}
+tr:nth-child(even) {
+  background-color: var(--primary-backgroud);
+}
+th {
+margin: auto;
+padding: 20px; 
+font-size: large;
+}
+td {
+margin: 2px;
+padding: 20px;
+font-size: large;
+}
+td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {
+display:block;
+}
+fieldset {
+border: 5px double var(--primary-dark-blue);
+/* padding-left: 15px; */
+/* margin: 2% 2px; */
+font-family: 'Roboto', sans-serif;
+display:grid;
+align-items: center;
+}
+.order{
+border: 5px double var(--primary-light-blue);
+}
+.orderL{
+background-color: var(--transparent-blue);
+}
+.orderRadio {
+text-align: center;
+}
+.orderMessage {
+padding: 0% 2%;
+line-height: 2em;
+
+}
+legend {
+  background-color: var(--primary-light-blue);
+  font-weight: bold;
+  font-size: 120%;
+}
+label {
+margin-top: 10px;
+padding-top: 5px;
+padding-left: 0;
+}
+.labelBlock {
+display: block;
+}
+button {
+  background-color: var(--primary-light-blue);
+  padding: 1%;
+  font-size: medium;
+  font-weight: bold;
+  color:var(--primary-contract);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+button:hover {
+  background-color: var(--primary-backgroud);
+}
+button:hover a {}
+
+input {
+  padding:2px;
+  font-size:120%;
+}    
+input:focus{
+  background-color: hsla(208, 74%, 80%, 0.91);
+}
+input::placeholder{
+  color:#4971A6;
+}
+*:required {
+  border: solid red;
+}
+.required:after {
+  content:" *";
+  color:red;
+}
+
+input:required:valid{
+  background-color: rgb(201, 241, 201);
+  border: 1px solid rgb(196, 194, 194)
+}
+output {}
+meter {}
+progress {}
+select {
+  padding: 5px;
+  font-size: 120%;
+}
+  optgroup {}
+  option {}
+textarea {
+  width: 400px;
+  height: 100px;
+}
+.orderText {
+  width: 400px;
+  height: 25px;
+}
+textarea:required:valid{
+  background-color: rgb(201, 241, 201);
+}
+textarea:focus{
+  background-color: hsla(208, 74%, 80%, 0.91);
+}
+
+/* ----- Media ----- */
+figure {}
+figcaption {}
+figure img {}
+svg {}
+picture {}
+source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+
+.contentNav{
+  text-align: left;
+  color: var(--primary-backgroud);
+  padding: 15x;
+  margin: 1% 0 3% 0;
+  display: flex;
+  flex-wrap:nowrap;
+}
+.contentNavColor{
+  background-color: var(--primary-dark-blue);
+  border-radius: 0%;
+}
+.submitButton{
+  padding: 1%;
+  background-color: var(--primary-contract);
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 5%;
+  color:var(--primary-backgroud)
+}
+.orderButton {
+  padding: 1%;
+  background-color: var(--primary-light-blue);
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 5%;
+  color: var(--primary-text)
+}
+.submitButton:hover{
+  background-color: var(--primary-dark-blue);
+  color:var(--primary-backgroud);
+}
+.orderButton:hover {
+  background-color: var(--transparent-contract);
+}
+#travels thead{
+  background-color: var(--primary-dark-blue)
+}
+#travels tr:nth-child(even) {
+  background-color: var(--transparent-contract);
+}
+#travels legend{
+  background-color: var(--primary-dark-blue);
+}
+
+#travels fieldset{
+  display:grid;
+  border: var(--primary-dark-blue);
+}
+
+#travels {
+  width: 100%;
+}
+#order {
+  width:100%
+}
+
+/* .gallery { 
+display: flex;
+align-items: center;
+flex-flow:row wrap;
+justify-content: center;
+
+}
+.gallery figure {
+width: 450px;
+margin:.75%;
+padding:0.5%;
+border:5px double var(--transparent-contract);
+
+}
+.gallery img {
+width:100%;
+}
+.gallery figcaption {
+display:block;
+padding:3px;
+text-align: center;
+color: var(--primary-contract)
+} */
+
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/* ----- Variables  -----  */
+:root {}
+
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  border:1px solid gray;
+  margin: 0 auto;
+  padding:4%;
+  width:900px;
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {margin-top:1%;}
+nav a {
+  border:1px solid gray;
+  margin-right:2%; 
+  text-decoration:none;
+  padding:1%;
+}
+nav a:hover {}
+
+/*  ----- Page layout blocks -----  */
+header {border-bottom:1px solid gray;}
+main {}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+footer {border-top:1px solid gray;}
+
+/*  -----  Typography  ----- */
+p {margin:0 0 3% 3%;}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {} /* Define consistant font family.*/
+h1 {}
+h2 {}
+h3 {margin:3% 0 0 0;}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {}
+caption {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {margin-bottom:3%;}
+fieldset {}
+  legend {}
+label {}
+  button {}
+  input {}
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
